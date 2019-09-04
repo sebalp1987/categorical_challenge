@@ -1,6 +1,6 @@
-# patagoniateam
+# Seba
 This code is used to solve the Categorical Feature Encoding Challenge in Kaggle. 
-[Link to the Competition]((https://www.kaggle.com/c/cat-in-the-dat))
+[Link to the Competition](https://www.kaggle.com/c/cat-in-the-dat)
 
 
 ## Folders
