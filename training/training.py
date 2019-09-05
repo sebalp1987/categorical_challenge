@@ -4,7 +4,7 @@ import pandas as pd
 from keras.utils import to_categorical
 from keras import layers, Input
 from keras.models import Model
-from keras.optimizers import SGD
+from keras.optimizers import Adam
 from keras.callbacks import EarlyStopping
 
 from resources import STRING
@@ -25,6 +25,7 @@ output_tensor = layers.Dense(2, activation='sigmoid')(x)
 model = Model(input_tensor, output_tensor)
 print(model.summary())
 
-model.compile(optimizer=SGD(), loss='binary_crossentropy', metrics=['accuracy'])
-model.fit(predictors, y, steps_per_epoch=10, shuffle=True, verbose=True, callbacks=[EarlyStopping(patience=2)])
+model.compile(optimizer=Adam(), loss='binary_crossentropy', metrics=['accuracy'])
+model.fit(predictors, y, steps_per_epoch=10, epochs=100,
+          shuffle=True, verbose=True, callbacks=[EarlyStopping(patience=2)])
 model.save(STRING.model_path + 'model.h5')
