@@ -11,4 +11,5 @@ train = data_input_path + "train.csv"
 test = data_input_path + "test.csv"
 
 train_processed = model_input_path + "/train_processed.csv/"
+test_processed = model_input_path + "/test_processed.csv/"
 submission = model_output_path + "submission.csv"
