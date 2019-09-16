@@ -1,8 +1,6 @@
 from resources import STRING
-
 import pandas as pd
 import os
-import numpy as np
 from keras.models import load_model
 
 model = load_model(STRING.model_path + 'model.h5')
